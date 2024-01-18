@@ -3,7 +3,6 @@ import pandas as pd
 import numpy as np
 import base64
 import io
-import jieba
 import datetime
 from collections import Counter
 from product_cat import *
@@ -110,15 +109,14 @@ def process_files(uploaded_files, product_cat_smeg_dict):
         #------------------------------------------------------------------------------------
 
 
-
         # Filter rows with '-' in 'PRODUCT_CATEGORY_SUGGESTED'
         filtered_df = merged_df[merged_df['PRODUCT_CATEGORY_SUGGESTED'].str.contains('-')]
         # Extract the "TITLE" column from the filtered DataFrame
         title_column = filtered_df["TITLE"]
         # Combine all titles into a single string
         all_titles = " ".join(title_column)
-        # Tokenize the text using jieba
-        words = list(jieba.cut(all_titles))
+        # Tokenize the text (using simple whitespace-based tokenization)
+        words = all_titles.split()
         # Define the desired n-gram size (e.g., bigrams)
         n = 2
         # Generate n-grams
