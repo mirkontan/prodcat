@@ -48,8 +48,19 @@ def process_files(uploaded_files, product_cat_smeg_dict):
                 if keyword in title:
                     return category
             return '-'
+
+
+        def map_productstatus(title):
+        title = title.lower()  # Convert the title to lowercase for case-insensitive comparison
+            for keyword, status in product_second_hand.items():
+                if keyword in title:
+                    return status
+            return '-'
+
         
         merged_df['PRODUCT_CATEGORY_SUGGESTED'] = merged_df['TITLE'].apply(map_category)
+        merged_df['PRODUCT_STATUS'] = merged_df['TITLE'].apply(map_productstatus)
+        
         merged_dfs.append(merged_df)
 
 
