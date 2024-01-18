@@ -12,8 +12,6 @@ from smeg_discarded_items import *
 from not_defined_discarded_items import *
 
 
-# Set page config at the beginning
-st.set_page_config(page_title="CATEGORIZZAZIONE PRODOTTO", page_icon="📂")
 # Define the Streamlit app
 st.title('Categorizza Prodotti / Aggiorna lista delle Discarded')
 
