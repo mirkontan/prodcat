@@ -1,5 +1,12 @@
 product_second_hand = {
     'second hand': 'Second-hand Product',
+    'second-hand': 'Second-hand Product',
+    'pre owned': 'Second-hand Product',
+    'pre-owned': 'Second-hand Product',
+    '二手': 'Second-hand Product',
+    '中古品': 'Second-hand Product',
+    'tangan kedua': 'Second-hand Product',
+    'produk bekas': 'Second-hand Product',
 }
 
 product_cat_smeg_dict = {
