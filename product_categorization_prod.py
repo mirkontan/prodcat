@@ -110,7 +110,7 @@ def process_files(uploaded_files, product_cat_smeg_dict):
         # Filter rows with '-' in 'PRODUCT_CATEGORY_SUGGESTED'
         filtered_df = merged_df[merged_df['PRODUCT_CATEGORY_SUGGESTED'].str.contains('-')]
         # Extract the "TITLE" column from the filtered DataFrame
-        title_column = filtered_df["TITLE"]
+        title_column = filtered_df["TITLE"].str.lower()
         # Combine all titles into a single string
         all_titles = " ".join(title_column)
         # Tokenize the text (using simple whitespace-based tokenization)
