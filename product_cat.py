@@ -1,3 +1,7 @@
+product_second_hand = {
+    'second hand': 'Second-hand Product',
+}
+
 product_cat_smeg_dict = {
     '炖': 'Stew Pot',
     "多士炉": "Toaster",
