@@ -117,7 +117,7 @@ def process_files(uploaded_files, product_cat_smeg_dict):
         words = all_titles.split()
         # Define the desired n-gram size (e.g., bigrams)
         # Create a selectbox to allow users to choose a number
-        n = st.selectbox('Select a number:', [1, 2, 3])
+        n = st.sidebar.selectbox('Selezione n. di parole che dovranno comporre le unità di conteggio:', [1, 2, 3])
         # Generate n-grams
         ngrams = [tuple(words[i:i + n]) for i in range(len(words) - n + 1)]
 
