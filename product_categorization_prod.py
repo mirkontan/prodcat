@@ -283,5 +283,4 @@ if uploaded_files:
 
 # Run the Streamlit app
 if __name__ == '__main__':
-    st.set_option('deprecation.showfileUploaderEncoding', False)
     st.write('Upload one or multiple XLSX files to begin.')
