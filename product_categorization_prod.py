@@ -116,7 +116,8 @@ def process_files(uploaded_files, product_cat_smeg_dict):
         # Tokenize the text (using simple whitespace-based tokenization)
         words = all_titles.split()
         # Define the desired n-gram size (e.g., bigrams)
-        n = 2
+        # Create a selectbox to allow users to choose a number
+        n = st.selectbox('Select a number:', [1, 2, 3])
         # Generate n-grams
         ngrams = [tuple(words[i:i + n]) for i in range(len(words) - n + 1)]
 
@@ -168,6 +169,7 @@ selected_brand = selected_brand_upper.lower()
 
 discard_listings = st.sidebar.checkbox(f"Discard Listings for: {selected_brand_upper}")
 if discard_listings:
+discard_listings = st.sidebar.checkbox(f"Discard Listings for: {selected_brand_upper}")
         
     # Create a function to append 'ITEM_ID' values to the selected discarded list and save to file
     def append_to_discarded_list(uploaded_file, selected_brand):
