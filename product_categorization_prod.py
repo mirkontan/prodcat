@@ -169,7 +169,6 @@ selected_brand = selected_brand_upper.lower()
 
 discard_listings = st.sidebar.checkbox(f"Discard Listings for: {selected_brand_upper}")
 if discard_listings:
-discard_listings = st.sidebar.checkbox(f"Discard Listings for: {selected_brand_upper}")
         
     # Create a function to append 'ITEM_ID' values to the selected discarded list and save to file
     def append_to_discarded_list(uploaded_file, selected_brand):
