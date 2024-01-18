@@ -51,7 +51,7 @@ def process_files(uploaded_files, product_cat_smeg_dict):
 
 
         def map_productstatus(title):
-        title = title.lower()  # Convert the title to lowercase for case-insensitive comparison
+            title = title.lower()  # Convert the title to lowercase for case-insensitive comparison
             for keyword, status in product_second_hand.items():
                 if keyword in title:
                     return status
