@@ -112,7 +112,8 @@ product_cat_ua_dict = {
     '衬衣': 'Dress Shirts',
     '瑜伽裤': 'Yoga Leggings',
     '卫裤子': 'Sanitary Trousers',
-    '帽子': 'Hats'
+    '帽子': 'Hats',
+    'Snowsuit': 'Showsuit'
 }
 
 product_cat_bulgari_dict = {
